@@ -10,4 +10,3 @@ resource "aws_route_table_association" "rt-igw" {
     Name = var.rt_name
   }
 }
-
