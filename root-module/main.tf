@@ -30,11 +30,9 @@ module "ec2" {
     source         = "../child-modules/ec2"
     vpc_id   = module.vpc-networking.vpc_id
     subnets = module.vpc-networking.public_subnet_ids
-    ami  = var.ec2_ami
-    ec2_instance_type = var.ec2_instance_type
-    ec2_instance_key  = var.ec2_instance_key
-    ec2_instance_name = var.ec2_instance_name
-    ec2_sg_name       = var.ec2_sg_name
-    ec2_sg_description = var.ec2_sg_description
-    ec2_sg_allowed_ports = var.ec2_sg_allowed_ports
+    ami  = var.ami
+    ec2_instance_type = var.instance_type
+    ec2_instance_key  = var.key_name
+    ec2_instance_name = var.ec2_name
+
 }
