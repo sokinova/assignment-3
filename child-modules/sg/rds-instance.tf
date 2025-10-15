@@ -20,8 +20,8 @@ resource "aws_db_instance" "mysql" {
   password               = var.mysql_password
   db_name = var.rds_db_name
   skip_final_snapshot    = true
-  vpc_security_group_ids = [aws_security_group.wordpress_sg.id]
-  db_subnet_group_name   = aws_db_subnet_group.mysql-sub-group.id
+  vpc_security_group_ids = [aws_security_group.rds_sg.id]
+  db_subnet_group_name   = aws_db_subnet_group.mysql-sub-group.name
   multi_az               = false
   backup_retention_period = 7
 }
