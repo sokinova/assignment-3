@@ -1,25 +1,25 @@
-variable ami {
+variable "ami" {
   type        = string
   description = "AMI for EC2 instance"
 }
 
-variable public_subnets {
+variable "subnets" {
   type        = list(string)
 }
 
-variable instance_type {
+variable "ec2_instance_type" {
   type        = string
 }
 
-variable key_name {
+variable "ec2_instance_key_name" {
   type        = string
 }
 
-variable ec2_name {
+variable "ec2_instance_name" {
   type        = string
 }
 
-variable wordpess_sg_id {
+variable "wordpress_sg_id" {
+  description = "The ID of the WordPress Security Group"
   type        = string
-  description = "Security group ID for the EC2 instance"
 }
